@@ -1,6 +1,9 @@
-🎨 Portfólio Dinâmico com Django
+# 🎨 Portfólio Dinâmico com Django
 
-Portfólio pessoal desenvolvido com Django 5.0, com painel administrativo para gerenciar conteúdos de forma simples e prática.
+Portfólio pessoal desenvolvido com **Django 5.0**, com painel administrativo para gerenciar conteúdos de forma simples e prática.
+
+🌐 **Acesse o projeto online:**  
+👉 https://gersonlima.onrender.com/
 
 ## 🚀 Como rodar localmente
 
