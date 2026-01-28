@@ -94,4 +94,4 @@ Acesse:
 
 ---
 
-Feito com Django 💙 | Portfólio dinâmico e escalável 🚀
+Feito por Gerson Lima
