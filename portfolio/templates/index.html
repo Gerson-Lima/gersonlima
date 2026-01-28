@@ -44,9 +44,9 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                   </li>
-                  {% if curriculo %}
+                  {% if curriculo_url %}
                   <li class="nav-item">
-                    <a href="{{ curriculo.arquivo.url }}" download="Gerson_Lima_Curriculum" target="_blank">
+                    <a href="{{ curriculo_url }}" download="Gerson_Lima_Curriculum" target="_blank">
                       <button class="btn ms-4 px-4">{{ curriculo.nome_botao }}</button>
                     </a>
                   </li>

@@ -13,10 +13,23 @@ def index(request):
     skills = Skill.objects.all()
     contato = Contato.objects.first()
     
+    # compute safe URL for curriculo (Cloudinary storage may raise if not configured)
+    curriculo_url = None
+    if curriculo and getattr(curriculo, 'arquivo', None):
+        try:
+            curriculo_url = curriculo.arquivo.url
+        except Exception:
+            # fall back to path using MEDIA_URL + name if available
+            nome = getattr(curriculo.arquivo, 'name', None)
+            if nome:
+                from django.conf import settings as _settings
+                curriculo_url = f"{_settings.MEDIA_URL}{nome}"
+
     return render(request, 'index.html', {
         'hero': hero,
         'about': about,
         'curriculo': curriculo,
+        'curriculo_url': curriculo_url,
         'projetos': projetos,
         'servicos': servicos,
         'skills': skills,

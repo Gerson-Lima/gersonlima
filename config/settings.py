@@ -31,7 +31,11 @@ CLOUDINARY_STORAGE = {
     "API_SECRET": os.getenv("CLOUDINARY_API_SECRET"),
 }
 
-DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+# If Cloudinary is configured via environment variables use it, otherwise fall back to local file storage for development
+if CLOUDINARY_STORAGE.get("CLOUD_NAME"):
+    DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+else:
+    DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
