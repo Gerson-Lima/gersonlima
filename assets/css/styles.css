@@ -26,7 +26,6 @@
 
 .animate-on-scroll {
     opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
 }
 
 .animate-on-scroll.visible {
@@ -222,7 +221,11 @@ body {
     background: #00ADB5;
     border-radius: 10px;
     position: relative;
-    animation: fillBars 3s 1;
+    width: 0%;
+}
+
+.animate-on-scroll.visible .skill-per {
+    animation: fillBars 3s ease forwards;
 }
 
  .skill-per::before {

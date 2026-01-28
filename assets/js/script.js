@@ -14,9 +14,15 @@ const observer = new IntersectionObserver(function(entries) {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Observe elements for scroll animations
-    document.querySelectorAll('.card, .skill, h1, p').forEach(el => {
+    document.querySelectorAll('.card, .skill, h1, p, .footer, .email-container').forEach(el => {
         el.classList.add('animate-on-scroll');
         observer.observe(el);
+    });
+
+    // Observe project cards with staggered animation delay
+    document.querySelectorAll('.cards-work').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        observer.observe(card);
     });
 
     let toggler = document.querySelector('.navbar-toggler');

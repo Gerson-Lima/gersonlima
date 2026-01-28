@@ -128,7 +128,7 @@
               <p class="abtme-desc">{{ about.descricao }}</p>
 
               {% for skill in skills %}
-              <div class="skill">
+              <div class="skill animate-on-scroll">
                 <div class="skill-name">{{ skill.nome }}</div>
                 <div class="skill-bar">
                     <div class="skill-per" style="max-width:{{ skill.percentual }}%"></div>
@@ -182,7 +182,7 @@
           </div>
           <div class="row">
             {% for projeto in projetos %}
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3 pt-1 cards-work {{ projeto.categoria }}">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 pt-1 cards-work {{ projeto.categoria }} animate-on-scroll">
               <div class="card">
                 {% if projeto.imagem %}
                 <img src="{{ projeto.imagem.url }}" class="card-img-top" alt="{{ projeto.titulo }}">
@@ -202,12 +202,12 @@
     </main>
 
     {% if contato %}
-    <footer class="footer" id="contact">
+    <footer class="footer animate-on-scroll" id="contact">
       <div class="container mb-5">
         <h1 class="text-center mt-5">{{ contato.titulo }} <span class="clr">me!</span></h1>
         <p class="srvc-desc d-50 mx-auto text-center mb-5">{{ contato.subtitulo }}</p>
         
-        <div class="email-container">
+        <div class="email-container animate-on-scroll">
           <input class="email-field" type="text" id="email" name="email" placeholder="Enter your email">
           <button class="btn" onclick="sendEmail()">Contact me</button>
         </div>
