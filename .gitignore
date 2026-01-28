@@ -7,6 +7,10 @@
 .DS_Store
 *.DS_Store
 
+# Environment variables
+.env
+.env.local
+
 # User-specific files
 *.rsuser
 *.suo
@@ -394,6 +398,13 @@ FodyWeavers.xsd
 # Windows Installer files from build outputs
 *.cab
 *.msi
+
+# Local Python virtualenvs
+.venv/
+venv/
+env/
+# pyenv
+.python-version
 *.msix
 *.msm
 *.msp
