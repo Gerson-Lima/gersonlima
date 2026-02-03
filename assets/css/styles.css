@@ -23,7 +23,7 @@ body {
 .navbar {
     width: 100%;
     padding-bottom: 20px;
-    position:fixed;
+    position: fixed;
     top: 0;
     transition: top 0.3s;
     background-color: rgba(34, 40, 49, 0.96);
@@ -129,10 +129,11 @@ body {
     margin-bottom: 0;
     max-width: 569px;
     text-align: left;
+}
 
-    .text-right {
-        text-align: right;
-    }
+.job-title .text-right {
+    display: block;
+    text-align: right;
 }
 
 .description, .abtme-desc, .srvc-desc {
@@ -151,7 +152,6 @@ body {
     max-width: 594px;
     color: #FFFFFF;
     padding-top: 20px;
-    
 }
 
 .container h1 {
@@ -178,12 +178,8 @@ body {
 }
 
 @keyframes fillBars {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
+    from { width: 0%; }
+    to { width: 100%; }
 }
 
 .skill-per {
@@ -194,7 +190,7 @@ body {
     animation: fillBars 3s 1;
 }
 
- .skill-per::before {
+.skill-per::before {
     content: attr(per);
     border-radius: 100%;
     position: absolute;
@@ -208,7 +204,6 @@ body {
 
 .skill-per:hover {
     box-shadow: 0 0 14px rgb(0, 173, 181);
-    
 }
 
 /* SERVICES */
@@ -317,11 +312,6 @@ body {
     margin-top: 20px;
 }
 
-
-
-
-
-/* Responsive mode */
 @media (max-width: 1200px) {
     .container {
         margin-inline: 8%;
@@ -525,4 +515,55 @@ body {
         margin-left: 0;
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .container-main {
+        margin-right: 14%;
+        margin-top: -20px;
+    }
+
+    .job-title {
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 0;
+        max-width: none;
+        text-align: left;
+    }
+
+    .image-container {
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 32px;
+    }
+
+    .social-media-buttons {
+        margin-right: 0 !important;  
+    }
+
+    .social-media-buttons .btn-social {
+        font-size: 2.0rem;
+        margin: 0px 2px;
+        margin-right: 6px;
+    }
+
+    .percentual-sec {
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 32px;
+    }
+
+}
+
+.btn-social {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
+  display: inline-flex;   
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;           
 }
