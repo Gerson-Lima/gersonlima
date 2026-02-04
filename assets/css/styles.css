@@ -563,6 +563,14 @@ body {
 
 }
 
+@media (max-width: 576px) {
+  .social-media-buttons .btn-social,
+  .social-media-buttons-footer .btn-social{
+    font-size: 1.6rem;
+  }
+}
+
+
 .btn-social {
   width: 44px;
   height: 44px;
