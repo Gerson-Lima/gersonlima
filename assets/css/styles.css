@@ -312,6 +312,12 @@ body {
     margin-top: 20px;
 }
 
+.btn-coming-soon{
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @media (max-width: 1200px) {
     .container {
         margin-inline: 8%;
